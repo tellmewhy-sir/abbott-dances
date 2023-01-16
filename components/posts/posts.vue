@@ -1,14 +1,14 @@
 <template>
-  <ul v-if="posts.length > 0" class="cards">
+  <ul v-if="posts.length > 0" class="flex flex-col gap-8">
     <li
       v-for="(post, index) in posts"
       :key="index"
+      class="text-center"
     >
       <nuxt-link
         :to="`/${postType}/${post.slug}`"
-        class="card card--clickable"
       >
-        <template v-if="postType === 'projects'">
+        <template v-if="page === 'projects'">
           <span class="flex-1">
             <h6 class="inline-block py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6>
             <h3 class="card-title">{{ post.title }}</h3>
@@ -20,7 +20,11 @@
             :src="post.cover"
           >
         </template>
-
+        <template v-else-if="page === 'choreography'">
+          <span class="font-primary text-white text-2xl">
+            {{ post.title }} {{ post.year ? `(${post.year})` : '' }}
+          </span>
+        </template>
         <template v-else>
           <span class="w-full">
             <span class="flex justify-between align-baseline">
@@ -55,7 +59,7 @@
       postType: {
         type: String,
         default: 'blog',
-        validator: (val) => ['blog', 'projects'].includes(val),
+        validator: (val) => ['blog', 'projects', 'choreography'].includes(val),
       },
       amount: { // ? https://content.nuxtjs.org/fetching#limitn
         type: Number,
@@ -69,6 +73,9 @@
           direction: 'desc' // you probably want 'asc' here
         }),
         validator: (obj) => typeof obj.key === 'string' && typeof obj.direction === 'string',
+      },
+      page:{
+        type: String
       }
     },
     data() {

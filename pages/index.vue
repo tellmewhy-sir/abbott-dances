@@ -2,7 +2,7 @@
 import GaryPortrait from '~/components/home/GaryPortrait.vue';
 
 <template>
-  <main class="relative">
+  <main class="relative container">
     <HomeHeader />
     <HomeGaryPortrait />
   </main>

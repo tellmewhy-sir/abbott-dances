@@ -1,11 +1,18 @@
 <template>
   <div class="bg-burgundy w-full">
 
-    <main>
-      <section class="w-full p-8">
-        <h1 class="font-primary text-5xl text-gray-100">About</h1>
-        <p>{{ bio }}</p>
-        <p>{{ artisticStatement }}</p>
+    <main class="w-full p-8 text-white avenir">
+      <section class="mb-12">
+        <h1 class="font-primary text-5xl text-gray-100 mb-8">About</h1>
+        <h2 class="font-primary text-3xl text-gray-100 mb-8">Bio</h2>
+        <p class="text-white">
+          {{ bio }}
+        </p>
+      </section>
+      <section>
+        <h2 class="font-primary text-3xl text-gray-100 mb-8">Artistic Statement</h2>
+        <p class="text-white">{{ artisticStatement }}</p>
+
       </section>
     </main>
   </div>

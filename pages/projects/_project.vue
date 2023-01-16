@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-amber">
+  <main>
     <section v-if="post">
       <nav class="mb-8" aria-label="go back">
         <router-back class="block" />

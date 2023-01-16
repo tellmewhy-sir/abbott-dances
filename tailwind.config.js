@@ -40,6 +40,7 @@ module.exports = {
           900: 'var(--color-primary-900)', // #0D131E
         },
         burgundy: 'rgba(101,50,50,0.75)',
+        amber: '#D8AC62',
       },
       screens: {
         xs: '480px', // Added xs
