@@ -4,8 +4,8 @@
     <main>
       <section class="w-full p-8">
         <h1 class="font-primary text-5xl text-gray-100">About</h1>
-        <p>{{ info }}</p>
-        <!-- <p>{{ info.artiststatement }}</p> -->
+        <p>{{ bio }}</p>
+        <p>{{ artisticStatement }}</p>
       </section>
     </main>
   </div>
@@ -13,14 +13,18 @@
   <script>
   export default {
     async asyncData({ $content, error }) {
-      let info;
+      let bio, artisticStatement;
       try {
-        info = await $content("about").fetch();
-        console.log(info);
+        const [info] = await $content("about").fetch();
+        bio = info.bio
+        artisticStatement = info.artiststatement
       } catch (e) {
         error({ message: "About page content not found" });
       }
-      return { info };
+      return { 
+        bio,
+        artisticStatement
+       };
     },
   }
   </script>
