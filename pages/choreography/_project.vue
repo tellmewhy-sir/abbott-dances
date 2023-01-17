@@ -6,15 +6,21 @@
       </nav>
 
       <article>
+        <div class="md:grid grid--choreography mb-8">
+          <div>
+            <h1 class="font-primary text-center">{{ post.title }} ({{ post.year }})</h1>
+            <p class="mt-1 mb-8 text-brown dark:text-primary-400">{{ post.description }}</p>
+          </div>
+          <div class="px-12 text-brown">
+            <nuxt-content :document="post" />
+          </div>
+        </div>
         <img
           v-if="post.cover"
           class="cover-image"
           :src="post.cover"
         >
         <!-- <h6 class="inline py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6> -->
-        <h1 class="">{{ post.title }}</h1>
-        <p class="mt-1 mb-8 text-primary-600 dark:text-primary-400">{{ post.description }}</p>
-        <nuxt-content :document="post" />
         <div v-if="post.gallery" class="nuxt-content">
           <img
             v-for="image in post.gallery"

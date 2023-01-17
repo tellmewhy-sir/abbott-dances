@@ -6,7 +6,8 @@
       class="text-center"
     >
       <nuxt-link
-        :to="`/${postType}/${post.slug}`"
+        :to="`/${page}/${post.slug}`"
+        
       >
         <template v-if="page === 'projects'">
           <span class="flex-1">
@@ -21,8 +22,12 @@
           >
         </template>
         <template v-else-if="page === 'choreography'">
-          <span class="font-primary text-white text-2xl">
-            {{ post.title }} {{ post.year ? `(${post.year})` : '' }}
+          <span
+            class="font-primary text-white text-2xl"
+            @mouseover="$emit('set-video', post.video)"
+            @mouseleave="$emit('set-video', null)"
+           >
+            {{ post.title }}
           </span>
         </template>
         <template v-else>

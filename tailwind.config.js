@@ -41,6 +41,7 @@ module.exports = {
         },
         burgundy: 'rgba(101,50,50,0.75)',
         amber: '#D8AC62',
+        brown: '#531818',
       },
       screens: {
         xs: '480px', // Added xs
