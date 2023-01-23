@@ -39,7 +39,8 @@ module.exports = {
           800: 'var(--color-primary-800)', // #1C263B
           900: 'var(--color-primary-900)', // #0D131E
         },
-        burgundy: 'rgba(101,50,50,0.75)',
+        // burgundy: 'rgba(101,50,50,0.75)',
+        burgundy: 'rgba(101,50,50)',
         amber: '#D8AC62',
         brown: '#531818',
       },

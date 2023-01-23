@@ -23,7 +23,7 @@
         </template>
         <template v-else-if="page === 'choreography'">
           <span
-            class="font-primary text-white text-2xl"
+            class="font-primary text-white text-2xl project-link"
             @mouseover="$emit('set-video', post.video)"
             @mouseleave="$emit('set-video', null)"
            >
@@ -119,3 +119,8 @@
     },
   }
 </script>
+<style>
+.choreo-projects.active span:not(:hover) {
+  opacity: 0;
+}
+</style>

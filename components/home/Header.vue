@@ -1,5 +1,5 @@
 <template>
-  <nav class="scrim-bg absolute z-40 home-header top-0 left-0 text-center" aria-label="Main Menu">
+  <nav class="scrim-bg md:absolute z-40 home-header md:top-10 md:left-10 text-center" aria-label="Main Menu">
     <nuxt-link class="font-primary text-6xl lowercase text-black mb-6 block" to="/">
         Gary Abbott
     </nuxt-link>

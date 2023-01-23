@@ -9,9 +9,9 @@
         <div class="md:grid grid--choreography mb-8">
           <div>
             <h1 class="font-primary text-center">{{ post.title }} ({{ post.year }})</h1>
-            <p class="mt-1 mb-8 text-brown dark:text-primary-400">{{ post.description }}</p>
+            <p class="mt-1 mb-8 text-brown">{{ post.description }}</p>
           </div>
-          <div class="px-12 text-brown">
+          <div class="px-12 text-brown project__content">
             <nuxt-content :document="post" />
           </div>
         </div>
@@ -47,3 +47,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.project__content p {
+  color: #531818
+}
+</style>
