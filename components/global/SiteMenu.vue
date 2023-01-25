@@ -3,7 +3,7 @@
         <font-awesome-icon icon="fa fa-times" size="xl"/>
     </button> -->
     <nav class="home-header" aria-label="Main Menu">
-      <nuxt-link class="font-primary text-3xl lowercase text-black text-center mt-8 mb-6 block" to="/">
+      <nuxt-link @click.native="$emit('close')" class="font-primary text-3xl lowercase text-black text-center mt-8 mb-6 block" to="/">
         Gary Abbott
       </nuxt-link>
       <ul class="flex flex-col gap-2">
