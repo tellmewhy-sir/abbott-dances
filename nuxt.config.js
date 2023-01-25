@@ -116,7 +116,18 @@ export default {
     safelist: {
       // standard: [],
       deep: [/dark/, /light/, /btn/, /icon/, /main/],
-      greedy: [/^card/, /image$/, /title$/, /^nuxt-content/, /code/, /pre/, /token/, /^vue-content-placeholders/],
+      greedy: [
+        /^card/,
+        /image$/,
+        /title$/,
+        /^nuxt-content/,
+        /code/,
+        /pre/,
+        /token/,
+        /^vue-content-placeholders/,
+        /svg.*/,
+        /fa.*/,
+      ],
     },
   },
   colorMode: {
