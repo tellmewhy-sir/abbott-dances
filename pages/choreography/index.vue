@@ -1,15 +1,15 @@
 <template>
   <main class="bg-amber relative">
-    <nav class="mb-8 z-40" aria-label="go back">
+    <!-- <nav class="mb-8 z-40" aria-label="go back">
       <router-back class="block" />
-    </nav>
-    <section v-if="posts" class="w-full max-w-5xl mx-auto">
-      <div class="z-10 relative">
-        <h1 class="font-primary text-center p-8 mb-12 text-5xl">Choreography</h1>
-        <posts post-type="projects" :page="'choreography'" :amount="10" @set-video="handleSetVideo" />
+    </nav> -->
+    <section v-if="posts" class="w-full max-w-5xl mx-auto h-screen overflow-y-scroll">
+      <div class="z-10 relative choreo-projects px-6 md:px-0" :class="{ active: showVideo }">
+        <h1 class="font-primary text-center p-8 mb-12 text-2xl lg:text-5xl">Choreography</h1>
+        <posts post-type="projects" :page="'choreography'" :amount="20" @set-video="handleSetVideo" />
       </div>
       <div class="z-0 absolute h-full w-full flex justify-center items-center top-0 left-0">
-        <video v-if="showVideo" :src="showVideo" autoplay loop />
+        <video v-if="showVideo" :src="showVideo" autoplay loop class="h-full w-full object-cover" />
       </div>
     </section>
   </main>

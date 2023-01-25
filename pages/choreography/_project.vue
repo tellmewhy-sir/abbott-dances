@@ -1,17 +1,18 @@
 <template>
-  <main class="bg-amber">
+  <main class="bg-amber items-center h-screen">
     <section v-if="post">
-      <nav class="mb-8" aria-label="go back">
+      <nav class="mb-8 text-center" aria-label="go back">
         <router-back class="block" />
       </nav>
 
       <article>
-        <div class="md:grid grid--choreography mb-8">
+        <!-- <div class="md:grid grid--choreography mb-8"> -->
+        <div class="flex flex-col items-center mb-8 md:px-48">
           <div>
             <h1 class="font-primary text-center">{{ post.title }} ({{ post.year }})</h1>
-            <p class="mt-1 mb-8 text-brown dark:text-primary-400">{{ post.description }}</p>
+            <p class="mt-1 mb-8 text-brown text-center">{{ post.description }}</p>
           </div>
-          <div class="px-12 text-brown">
+          <div class="px-12 text-brown project__content">
             <nuxt-content :document="post" />
           </div>
         </div>
@@ -47,3 +48,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.project__content p {
+  color: #531818
+}
+</style>
