@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-amber items-center h-screen">
+  <main class="bg-amber items-center md:h-screen overflow-y-scroll pt-20 md:pt-10">
     <section v-if="post">
       <nav class="mb-8 text-center" aria-label="go back">
         <router-back class="block" />
