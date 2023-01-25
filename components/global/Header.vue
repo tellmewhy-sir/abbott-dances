@@ -1,16 +1,8 @@
 <template>
-  <nav class="fixed z-40 top-0 inset-x-0 pt-3 px-3" aria-label="Main Menu">
-    <ul class="flex">
-      <li class="flex-1">
-        <nuxt-link class="font-primary" to="/">Home</nuxt-link>
-      </li>
-      <li class="flex-1 ml-2">
-        <nuxt-link class="font-primary" to="/blog">Blog</nuxt-link>
-      </li>
-      <li class="flex-1 ml-2">
-        <nuxt-link class="font-primary" to="/projects">Projects</nuxt-link>
-      </li>
-    </ul>
+  <nav class="fixed z-20 top-0 inset-x-0 p-5" aria-label="Main Menu">
+    <button class="text-black mb-6 block" @click="$emit('open')">
+        <font-awesome-icon icon="fa fa-bars" size="lg"/>
+    </button>
   </nav>
 </template>
 
