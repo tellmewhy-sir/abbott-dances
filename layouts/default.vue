@@ -2,10 +2,10 @@
 import SiteMenu from '~/components/global/SiteMenu.vue';
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :class="{ 'bg-amber': isProjectPage }">
     <Header v-if="!isHome" class="md:hidden" @open="showMenu = true" />
     <nuxt v-if="isHome" />
-    <div v-else class="relative w-full" :class="{ 'grid grid--page': isProjectPage }">
+    <div v-else class="relative w-full" :class="{ 'md:grid grid--page': isProjectPage }">
       <aside class="site-menu z-20 p-8 left-10 top-10 hidden md:block" :class="{ 'absolute': !isProjectPage }">
         <SiteMenu />
       </aside>
